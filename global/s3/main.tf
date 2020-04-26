@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "grocery60-terraform-state"
+  bucket = "grocery60-terraform-state-${var.env}"
   # Enable versioning so we can see the full revision history of our
   # state files
   region         = "us-east-2"
